@@ -1,0 +1,8 @@
+.header-cart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.fa-cart-shopping {
+  color: white;
+}
