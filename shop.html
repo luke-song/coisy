@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
     <header>
       <h2 class="header-title" style="font-size: 4em">2024 SUMMER COLLECTION</h2>
+      <form action="http://localhost:4242/create-checkout-session" method="POST">
+        <button type="submit" id="checkout-button">Checkout</button>
+      </form>
     </header>
     <main>
       <section id="product1" class="section-p1">
@@ -50,7 +54,6 @@
             </div>
             <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
           </div>
-
           <div class="pro">
             <div class="overlay"></div>
             <img src="/public/model.png" alt="" />
@@ -107,7 +110,9 @@
         </div>
       </section>
     </main>
-    <aside></aside>
+    <aside>
+
+    </aside>
     <footer></footer>
     <script src="./script.js"></script>
     <script src="./header.js"></script>
