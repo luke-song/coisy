@@ -6,6 +6,12 @@
   --headline-color: white;
   --background-color: #11151c;
   --text-color: rgba(255, 255, 255, 0.5);
+
+  --text-base: 1.25rem;
+  --text-lg: 1.5rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.25rem;
 }
 
 html,
