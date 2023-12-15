@@ -1,1 +1,12 @@
+/* Cart Button */
+.header-cart {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.fa-cart-shopping {
+  color: white;
+}
 
