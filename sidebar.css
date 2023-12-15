@@ -121,3 +121,21 @@
   padding-top: 10px;
 }
 
+/* PAY-NOW */
+#pay-now {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%; /* Full width */
+}
+
+#pay-now:hover {
+  background-color: #45a049;
+}
