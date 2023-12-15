@@ -1,0 +1,2 @@
+- Add Supabase backend integration
+- Add Stripe API integration

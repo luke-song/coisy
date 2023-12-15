@@ -163,6 +163,26 @@ a:hover {
   position: relative;
 }
 
+.pro {
+  transition: all 0.1s;
+  position: relative;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(105deg,
+    transparent 40%,
+    rgba(249, 249, 249, 0.8) 45%,
+    transparent 54%);
+  filter: brightness(1.2) blur(40px);
+  background-size: 150% 150%;
+  background-position: 100%;
+  transition: all 0.1s;
+}
+
 #product1 .pro:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
 }
