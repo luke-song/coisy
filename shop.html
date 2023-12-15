@@ -16,10 +16,6 @@
       <span class="header-cart">
         <i class="fal fa-shopping-cart cart"></i>
       </span>
-
-      <form action="http://localhost:4242/create-checkout-session" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
-      </form>
       
     </header>
     <main>
@@ -138,7 +134,10 @@
 
       <div class="cart-footer">
         <h3>Total $575.94</h3>
-        <button id="pay-now">Checkout</button>
+        <button type="submit" id="pay-now">Checkout</button>
+        <form action="http://localhost:4242/create-checkout-session" method="POST">
+          <button type="submit" id="pay-now">Pay Now</button>
+        </form>
       </div>
     </aside>
 
