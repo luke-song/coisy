@@ -108,9 +108,6 @@ body {
   font-weight: 500;
 }
 
-.socials {
-}
-
 .socials svg {
   margin: 0 5px;
   transition: all 0.5s ease-in-out;
@@ -166,6 +163,12 @@ a:hover {
 .pro {
   transition: all 0.1s;
   position: relative;
+}
+
+.pro-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .overlay {
@@ -226,9 +229,29 @@ a:hover {
   border-radius: 50px;
   background-color: #e8f6ea;
   font-weight: 500;
-  color: #088178;
+  color: #808c93;
   border: 1px solid #cce7d0;
   position: absolute;
-  bottom: 20px;
-  right: 10px;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 600px) {
+  #product1 .pro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #product1 .pro {
+    width: 80%; /* Adjust the width as needed */
+    margin: 15px auto; /* Center the element and add margin */
+  }
+
+  #product1 .pro:nth-child(2),
+  #product1 .pro:nth-child(3),
+  #product1 .pro:nth-child(4),
+  #product1 .pro:nth-child(5) {
+    margin-top: 100px;
+  }
 }
