@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.static("."));
 
 const YOUR_DOMAIN = "http://localhost:4242";
+const frontend = "http://localhost:5500";
 
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -21,7 +22,7 @@ app.post("/create-checkout-session", async (req, res) => {
     ],
     mode: "payment",
     success_url: `${YOUR_DOMAIN}/success.html`,
-    cancel_url: `${YOUR_DOMAIN}/cancel.html`,
+    cancel_url: `${frontend}/shop.html`,
   });
 
   res.redirect(303, session.url);
