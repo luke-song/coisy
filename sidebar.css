@@ -1,0 +1,141 @@
+/* Cart Button */
+.header-cart {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.fa-cart-shopping {
+  color: white;
+}
+
+/* Sidebar */
+#cart-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 380px;
+  height: 100%;
+  background-color: #333; /* Dark background for the sidebar */
+  color: white; /* Text color */
+  overflow-y: auto; /* Enable scrolling if content is too long */
+  z-index: 1000; /* Make sure it's above other content */
+  padding: 20px; /* Padding around the content */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Styles for the Cart Header */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-header h2 {
+  margin: 0;
+}
+
+/* Style for the close button */
+#close-cart {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #555; /* Separator line */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item-top-container,
+.cart-item-bottom-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-item-top-container .image-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.cart-item-top-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-top-container h3 {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-bottom-container {
+  width: 100%;
+  gap: 50px;
+}
+
+.cart-item-bottom-container p {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.cart-item h3 {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+/* Style for the quantity input */
+.cart-item input[type='number'] {
+  width: 50px;
+  margin: 0 10px;
+}
+
+/* Style for the remove item button */
+.remove-item {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Styles for the Cart Footer */
+.cart-footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* PAY-NOW */
+#pay-now {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%; /* Full width */
+}
+
+#pay-now:hover {
+  background-color: #45a049;
+}
