@@ -79,6 +79,18 @@
   object-fit: cover;
 }
 
+.cart-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.cart-item-top-container {
+  gap: 0.5rem;
+}
+
 .cart-item-top-container h3 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
