@@ -63,6 +63,7 @@
 .cart-item-bottom-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .cart-item .image-container {
@@ -79,17 +80,24 @@
 }
 
 .cart-item-top-container h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+  height: 50px;
+}
+
+.cart-item-top-container .remove-button {
   display: flex;
-  align-items: center;
+  flex-shrink: 0;
 }
 
 .cart-item-bottom-container {
-  width: 100%;
-  gap: 50px;
 }
 
 .cart-item-bottom-container p {
-  font-size: 1.5rem;
+  font-size: var(--text-2xl);
   text-align: left;
   width: 100%;
 }
@@ -110,10 +118,9 @@
 }
 
 /* Style for the remove item button */
-.remove-item {
+.remove-button {
   background: none;
   border: none;
-  color: red;
   cursor: pointer;
   font-size: 24px;
 }
