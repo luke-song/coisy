@@ -7,6 +7,8 @@
   --background-color: #11151c;
   --text-color: rgba(255, 255, 255, 0.5);
 
+  --text-xs: 0.75rem;
+  --text-sm: 1rem;
   --text-base: 1.25rem;
   --text-lg: 1.5rem;
   --text-xl: 1.75rem;
