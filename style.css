@@ -14,6 +14,11 @@
   --text-xl: 1.75rem;
   --text-2xl: 2rem;
   --text-3xl: 2.25rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 2.75rem;
+  --text-6xl: 3rem;
+  --text-7xl: 3.5rem;
+  --text-8xl: 4rem;
 }
 
 html,
@@ -25,6 +30,18 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--text-color);
   text-align: center;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* .canvas-container {
