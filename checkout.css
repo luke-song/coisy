@@ -1,0 +1,55 @@
+input {
+  outline: none;
+}
+
+.header-title {
+  margin: 53.12px 0;
+  font-size: var(--text-6xl);
+  height: 127.5px;
+}
+
+.main * {
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  background-color: #333;
+  border-radius: 10px;
+  min-width: 900px;
+  max-width: 50vw;
+}
+
+.main-header h2 {
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.625rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: var(--text-2xl);
+}
+
+/* Order Summary */
+.cart-item {
+  border-bottom: 0.1px solid #55555590;
+}
+
+.order-summary-container,
+.billing-info-container {
+  width: 100%;
+  min-height: 50vh;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.cart-quantity-input {
+  color: black;
+}
+
+.total-text {
+  width: 100%;
+  text-align: right;
+  font-size: var(--text-xl);
+}
+
