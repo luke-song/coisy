@@ -16,11 +16,6 @@
       <span class="header-cart">
         <i class="fal fa-shopping-cart cart"></i>
       </span>
-
-      <form action="http://localhost:4242/create-checkout-session" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
-      </form>
-      
     </header>
     <main>
       <section id="product1" class="section-p1">
@@ -119,26 +114,62 @@
     <aside id="cart-sidebar">
       <div class="cart-header">
         <h2>Your Cart</h2>
-        <button id="close-cart" onclick="">X</button>
+        <button id="close-cart">
+          <i class="fas fa-angle-right"></i>
+        </button>
       </div>
 
-      <div class="cart-item">
-        <div class="cart-item-top-container">
+      <ul class="cart-item-container">
+        <li class="cart-item">
           <div class="image-container">
             <img src="./public/model.png" alt="ADICOLOR SEASONAL" />
           </div>
-          <h3>ADICOLOR SEASONAL</h3>
-          <button class="remove-item">🗑️</button>
-        </div>
-        <div class="cart-item-bottom-container">
-          <p>$50</p>
-          <input type="number" value="1" />
-        </div>
-      </div>
+          <div class="cart-item-container">
+            <div class="cart-item-top-container">
+              <h3>ADICOLOR SEASON</h3>
+              <button class="remove-button">
+                <i class="far fa-times" style="color: #606060"></i>
+              </button>
+            </div>
+            <div class="cart-item-bottom-container">
+              <p>$50</p>
+              <div class="cart-quantity-container">
+                <span>-</span>
+                <input class="cart-quantity-input" type="text" value="1" min="1" />
+                <span>+</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cart-item">
+          <div class="image-container">
+            <img src="./public/model.png" alt="ADICOLOR SEASONAL" />
+          </div>
+          <div class="cart-item-container">
+            <div class="cart-item-top-container">
+              <h3>ADICOLOR SEASON</h3>
+              <button class="remove-button">
+                <i class="far fa-times" style="color: #606060"></i>
+              </button>
+            </div>
+            <div class="cart-item-bottom-container">
+              <p>$50</p>
+              <div class="cart-quantity-container">
+                <span>-</span>
+                <input class="cart-quantity-input" type="text" value="1" min="1" />
+                <span>+</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
 
       <div class="cart-footer">
         <h3>Total $575.94</h3>
-        <button id="pay-now">Checkout</button>
+        <button type="submit" id="checkout" onclick="location.href = 'checkout.html'">Checkout</button>
+        <form action="http://localhost:4242/create-checkout-session" method="POST">
+          <button type="submit" id="pay-now">Pay Now</button>
+        </form>
       </div>
     </aside>
 

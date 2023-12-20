@@ -1,11 +1,19 @@
-const headerCart = document.querySelector('.header-cart');
-const cartCloseButton = document.querySelector('#close-cart');
+const $ = (selector) => document.querySelector(selector);
+
 const cartSideBar = document.querySelector('#cart-sidebar');
 
-headerCart.addEventListener('click', () => {
-  cartSideBar.style.display = 'block';
-});
+const init = () => {
+  toggleCartSidebar();
+};
 
-cartCloseButton.addEventListener('click', () => {
-  cartSideBar.style.display = 'none';
-});
+const toggleCartSidebar = () => {
+  $('.header-cart').addEventListener('click', () => {
+    cartSideBar.style.display = 'block';
+  });
+
+  $('#close-cart').addEventListener('click', () => {
+    cartSideBar.style.display = 'none';
+  });
+};
+
+init();
