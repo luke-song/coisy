@@ -1,0 +1,119 @@
+input {
+  outline: none;
+}
+
+.header-title {
+  margin: 53.12px 0;
+  font-size: var(--text-6xl);
+  height: 127.5px;
+}
+
+.main * {
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  background-color: #333;
+  border-radius: 10px;
+  min-width: 900px;
+  max-width: 50vw;
+}
+
+.main-header h2 {
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.625rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: var(--text-2xl);
+}
+
+/* Order Summary */
+.cart-item {
+  border-bottom: 0.1px solid #55555590;
+}
+
+.order-summary-container,
+.billing-info-container {
+  width: 100%;
+  min-height: 50vh;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.cart-quantity-input {
+  color: black;
+}
+
+.total-text {
+  width: 100%;
+  text-align: right;
+  font-size: var(--text-xl);
+}
+
+/* Billing Information */
+.billing-info-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.billing-info-form-input-wrapper {
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+
+.billing-info-form-input-wrapper label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.billing-info-form-input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+
+  color: black;
+}
+
+.billing-info-form-button {
+  background: #5c6bc0;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.billing-info-form-button:hover {
+  background: #3f51b5;
+}
