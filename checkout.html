@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="checkout.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
   </head>
   <body>
     <header>
@@ -31,7 +34,12 @@
                 <p>$50</p>
                 <div class="cart-quantity-container">
                   <span>-</span>
-                  <input class="cart-quantity-input" type="text" value="1" min="1" />
+                  <input
+                    class="cart-quantity-input"
+                    type="text"
+                    value="1"
+                    min="1"
+                  />
                   <span>+</span>
                 </div>
               </div>
@@ -47,16 +55,31 @@
             <div class="user-info">
               <div class="billing-info-form-input-wrapper">
                 <label>Email</label>
-                <input class="billing-info-form-input email-input" type="email" required />
+                <input
+                  class="billing-info-form-input email-input"
+                  id="email-input"
+                  type="email"
+                  required
+                />
               </div>
               <div class="input-pair">
                 <div class="billing-info-form-input-wrapper">
                   <label>First Name</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="firstname-input"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div class="billing-info-form-input-wrapper">
                   <label>Last Name</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="lastname-input"
+                    type="text"
+                    required
+                  />
                 </div>
               </div>
             </div>
@@ -65,38 +88,105 @@
               <div class="input-pair">
                 <div class="billing-info-form-input-wrapper">
                   <label>Address Line 1</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="address-input"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div class="billing-info-form-input-wrapper">
                   <label>Address Line 2</label>
-                  <input class="billing-info-form-input" type="text" />
+                  <input
+                    class="billing-info-form-input"
+                    id="address-input-2"
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="input-pair">
                 <div class="billing-info-form-input-wrapper">
                   <label>City</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="city-input"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div class="billing-info-form-input-wrapper">
                   <label>State/Province</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="state-input"
+                    type="text"
+                    required
+                  />
                 </div>
               </div>
               <div class="input-pair">
                 <div class="billing-info-form-input-wrapper">
                   <label>Postal Code</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="postalcode-input"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div class="billing-info-form-input-wrapper">
                   <label>Country</label>
-                  <input class="billing-info-form-input" type="text" required />
+                  <input
+                    class="billing-info-form-input"
+                    id="country-input"
+                    type="text"
+                    required
+                  />
                 </div>
               </div>
             </div>
           </form>
-          <button type="submit" class="billing-info-form-button">Proceed to Payment</button>
+          <button type="submit" class="billing-info-form-button" id="send">
+            Proceed to Payment
+          </button>
         </div>
       </div>
+      <script>
+        document.getElementById("send").addEventListener("click", function () {
+          var email = document.getElementById("email-input").value;
+          var firstname = document.getElementById("firstname-input").value;
+          var lastname = document.getElementById("lastname-input").value;
+          var address = document.getElementById("address-input").value;
+          var address2 = document.getElementById("address-input-2").value;
+          var city = document.getElementById("city-input").value;
+          var state = document.getElementById("state-input").value;
+          var postalcode = document.getElementById("postalcode-input").value;
+          var country = document.getElementById("country-input").value;
+
+          var data = {
+            email: email,
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            address2: address2,
+            city: city,
+            state: state,
+            postalcode: postalcode,
+            country: country,
+          };
+
+          fetch("http://localhost:4242/addUser", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then((response) => response.json())
+            .then((data) => console.log("Success:", data))
+            .catch((error) => console.error("Error:", error));
+        });
+      </script>
     </main>
   </body>
 </html>
